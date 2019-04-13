@@ -15,6 +15,12 @@ public class Car {
     private String mCuloare;
     private int mHp;
 
+    public Car(String mNume, String mCuloare, int mHp) {
+        this.mNume = mNume;
+        this.mCuloare = mCuloare;
+        this.mHp = mHp;
+    }
+
     public String getmNume() {
         return mNume;
     }

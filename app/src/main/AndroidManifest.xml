@@ -11,18 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".week4.RecyclerViewActivity"></activity>
-        <activity android:name=".week3.SpinnerActivity"></activity>
-        <activity android:name=".week3.WebViewActivity"></activity>
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".week3.ViewGroupsActivity"></activity>
-        <activity android:name=".week3.LoginActivity">
+        <activity android:name=".week4.ConstraintLayoutActivity"></activity>
+        <activity android:name=".week4.RecyclerViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".week3.SpinnerActivity" />
+        <activity android:name=".week3.WebViewActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".week3.ViewGroupsActivity" />
+        <activity android:name=".week3.LoginActivity"></activity>
     </application>
 
 </manifest>
