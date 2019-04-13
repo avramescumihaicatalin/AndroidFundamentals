@@ -4,13 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".week3.ViewGroupsActivity">
 
+    <!--
+    Daca continutul nu mai incape pe ecranul telefonului folosim un ScrollView
+    Trebuie sa aiba un singur copil iar in interiorul copilului putem adauga restul de elemente.
+    Facem true proprietatea fillViewport=true pentru a ne asigura ca se intinde pe toata suprafata
+    Avem ca si copil un LinearLayoyt.
+    Putem face scroll si pe orizontala. Pe orizontala e mai probabil sa folosim reciclerView-uri.
+    -->
+
+    <!--Ctrl + Alt + L pentru formatare font-->
+    <!--vizor - apk pentru a face mirroring la ecranul de android-->
+    <!--Cand crapa apk cautam eroarea in Logcat, cautam liniile rosii si de obicei erorile
+    apar cu albastru si e subliniata si acolo gasim detalii despre eroare-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/text_view_long_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <!--
+    Este un ViewGroup ce are specific ca nu stie sa aseze elementele.
+    Daca punem mai multe View-uri le pune pe toate in coltul stanga sus.
+    Daca vrem sa le asezam trebuie sa ne folosim de layout_gravity sau gravity.
+    Cel mai des il folosim la fragmente. Este de fapt chenarul unde inseram fragmentele.
+    Am doua View-uri: unul de 128 si unul de 64. Or sa fie unul deasupra celullalt dar doar pentru
+    ca unul este mai mare se vor fi afisate unul deasupra celuilalt.
+    Am folosit layout_gravity.
+    FrameLayout- este folosit pentru a bloca o zona de ecran pentru afisarea
+    unui singur view copil pentru ca daca folosim mai multi copii acestia se pot suprapune
+    datorita varietatii mari de rezolutii de ecrane. Putem totusi adauga
+    mai multi copii dar acestia sa fie orientati cu layout_gravity-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_128"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_64"
+                android:layout_gravity="center"
+                android:background="@color/colorAccent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_32"
+                android:layout_gravity="center"
+                android:background="@android:color/white" />
+        </FrameLayout>
     </LinearLayout>
-
 </ScrollView>

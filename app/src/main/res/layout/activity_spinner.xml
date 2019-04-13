@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="32dp"
+    tools:context=".week3.SpinnerActivity">
+
+    <!--
+    Spinner e diferit fata de celelalte layout-uri in sensul ca pentru a fi populat trebuie sa
+    avem o abordare mai complexa.
+    Spinner e un dropdown. Un control pe care atunci cand apesi se deschide o lista de optiuni
+    din care putem selecta una iar dupa selectare se inchide lista si ramane o singura varianta selectata.
+    Partea diferinta e cea de mapare a informatiei in interiorul lui.
+    Are proprietatea layout_width = "fill_parent".
+    Difera in partea de java unde apare notiunea de Adapter.(il folosim si la RecycleView cand o sa
+    facem liste si o sa l folosim si la tab-uri.
+    Adapter e un design pattern. Primeste o sursa de date si o proceseaza in asa fel incat sa se
+    pleze pe ce ai nevoie.
+    In Spinner primim o lista de elemente fie dintr-o baza de date fie dintr-un API. Folosim un adapter
+    care formateaza datele astfel incat sa le putem afisa apoi in Spinner.( fiecare element sa devina
+    item in Spinner-ul meu).
+    -->
+
+    <Spinner
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_colors">
+
+
+    </Spinner>
+
+</LinearLayout>

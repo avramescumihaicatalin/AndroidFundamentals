@@ -17,7 +17,7 @@ public class ViewGroupsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_groups);
 
-        initView();
+        initView(); // metoda pentru definirea view-urilor
     }
 
     private void initView() {

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".week3.WebViewActivity">
+
+    <!--
+    E folosit sa afiseze pagini web. E ca un mini browser.
+    Il adaugam in Layout si din partea de Java ii setam un URL pe care-l incarcam in WebView.
+    Trebuie sa setam pe true setJavaScriptEnabled(boolean b); din java.
+    By default nu suport script-uri din JavaScript.
+    apelam metoda loadUrl(String URL); care incarca pagina web.
+    -->
+
+    <WebView
+        android:id="@+id/web_view_android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </WebView>
+
+</LinearLayout>

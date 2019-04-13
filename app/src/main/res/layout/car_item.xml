@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/general_padding"
+    android:orientation="vertical"
+    >
+
+    <!--Pasul2
+    setam height wrap_content pentru ca va fi un layout micut, nu vreau sa
+    fie pe tot ecranul pentru a intra mai mutle items intr-un ecran
+
+    Afisam numele intr-un textView;
+
+    Pasul3
+    Facem ViewHolder-ul -> facem o clasa noua CarViewHolder♦
+    -->
+
+    <TextView
+        android:id="@+id/text_view_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_view_color"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            />
+
+        <TextView
+            android:id="@+id/text_view_hp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>

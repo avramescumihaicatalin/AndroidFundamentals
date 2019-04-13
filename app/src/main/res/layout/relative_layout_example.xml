@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--In partea de resurse denumirile incep cu litere mici si nu putem folosi cifre
+    nici la poze, nici la layout-uri-->
+
+    <!--
+        RelativeLayout ajuta elementele sa se aseze relative unele la altele sau relative la parinte.
+        ex: textView x in dreapta textView y sau poate fi in zona botton a parent-ului.
+        Este un layout destul de vechi si nu e recomandat sa l folosim foarte des.
+        In locul lui a fost lansat ConstraintLayout.
+        Diferenta intre ele:
+            modul de vizualizare???
+            viteza de afisare.
+        In cazul lui RelativeLayout se face o structura arborescenta
+        link in documentatie: cum se face ...rea in android.
+        El face niste masuratori inainte de a afisa ceva.
+        La RelativeLayout parcurge toata structura arborescenta pe care o cream in interiorul fisierului
+        si sa se asigure ca stie cum sa le afiseze relative unele la celelalte si dureaza foarte mult de
+        obicei mai ales cand arborele are foarte multe elemente.
+        ConstraintLayout are structura liniara si merge mai repede.
+    -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello TextView1 :)"
+            android:layout_alignParentBottom="true"
+            />
+    <!--
+        layout_alignParentBottom = "true" -> setare in partea de jos a parintelui
+
+    -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello TextView2 :)"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+<!--Are aceeasi tendinta ca si FrameLayout sa le afiseze in coltul din stanga sus
+    asa ca vom seta niste proprietati.
+-->
+
+    <!--Le facem relativ unul la celalalt-->
+        <TextView
+            android:id="@+id/text_view_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello TextView3 :)"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello TextView4 :)"
+            android:layout_toRightOf="@id/text_view_3"
+            android:layout_below="@id/text_view_3"
+            />
+        <!--layout_toRightOf pe height; layout_below - pe width->
+         pozitionare relativa la un view-->
+
+    </RelativeLayout>
+</LinearLayout>
