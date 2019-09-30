@@ -11,8 +11,8 @@
     Spinner e diferit fata de celelalte layout-uri in sensul ca pentru a fi populat trebuie sa
     avem o abordare mai complexa.
     Spinner e un dropdown. Un control pe care atunci cand apesi se deschide o lista de optiuni
-    din care putem selecta una iar dupa selectare se inchide lista si ramane o singura varianta selectata.
-    Partea diferinta e cea de mapare a informatiei in interiorul lui.
+    din care putem selecta una iar dupa selectare se inchide lista si ramane acea varianta selectata.
+    Partea diferita e cea de mapare a informatiei in interiorul lui.
     Are proprietatea layout_width = "fill_parent".
     Difera in partea de java unde apare notiunea de Adapter.(il folosim si la RecycleView cand o sa
     facem liste si o sa l folosim si la tab-uri.

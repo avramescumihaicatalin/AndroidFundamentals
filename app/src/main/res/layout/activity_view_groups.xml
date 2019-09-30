@@ -15,7 +15,7 @@
     Putem face scroll si pe orizontala. Pe orizontala e mai probabil sa folosim reciclerView-uri.
     -->
 
-    <!--Ctrl + Alt + L pentru formatare font-->
+    <!--Ctrl + Alt + L pentru formatare text-->
     <!--vizor - apk pentru a face mirroring la ecranul de android-->
     <!--Cand crapa apk cautam eroarea in Logcat, cautam liniile rosii si de obicei erorile
     apar cu albastru si e subliniata si acolo gasim detalii despre eroare-->
@@ -35,12 +35,13 @@
             android:layout_height="wrap_content">
 
     <!--
+    FrameLayout
     Este un ViewGroup ce are specific ca nu stie sa aseze elementele.
     Daca punem mai multe View-uri le pune pe toate in coltul stanga sus.
     Daca vrem sa le asezam trebuie sa ne folosim de layout_gravity sau gravity.
     Cel mai des il folosim la fragmente. Este de fapt chenarul unde inseram fragmentele.
     Am doua View-uri: unul de 128 si unul de 64. Or sa fie unul deasupra celullalt dar doar pentru
-    ca unul este mai mare se vor fi afisate unul deasupra celuilalt.
+    ca unul este mai mare vor fi afisate unul deasupra celuilalt.
     Am folosit layout_gravity.
     FrameLayout- este folosit pentru a bloca o zona de ecran pentru afisarea
     unui singur view copil pentru ca daca folosim mai multi copii acestia se pot suprapune

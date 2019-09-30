@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.avramescu.androidfundamentals.R;
 
@@ -16,8 +17,8 @@ public class SpinnerActivity extends AppCompatActivity {
      * Pentru a crea un Spinner avem nevoie de:
      * 1) o sursa de date(DataSource) - hardcodam o lista pentru
      * ca inca nu am invatat sa lucram cu baza de date sau cu API
-     * 2) setam Adapterul
-     * 3) asociem Adapterul Spinnerului.
+     * 2) cream Adapterul (new ArrayAdapter)
+     * 3) asociem Adapterul Spinnerului. (metoda setAdapter)
      * Sursa de date este trimisa unui Adaptor iar apoi Spinner-ului pentru afisare
      *
      * Exista doua tipuri de Adapter in Android:
@@ -39,7 +40,7 @@ public class SpinnerActivity extends AppCompatActivity {
 
         initView();// initializare Spinner
         setColors(); // creat dataSource-ul
-        setAdapter(); // metoda care seteazaAdapterul
+        setAdapter(); // metoda care creaza si seteazaAdapterul
     }
 
 /*    am facut overEngeniering asa ca am renuntat la metoda getAdapter si am implementat
@@ -50,14 +51,15 @@ public class SpinnerActivity extends AppCompatActivity {
                 android.R.layout.simple_list_item_1, mColors);
     }
         /*
-    context-ul este activitatea curent
+    context-ul este activitatea curenta
     LayoutRes -> resursa
     DataSource-ul -> sursa( lista )
     La Recycleview putem sa ne definim noi cum o sa arate item-ul din lista.
     La Spinner putem folosi niste items deja definite in Android.
     Cum exista niste culori predefinite exista si Layoout-uri predefinite.
     Aici folosim un item predefinit care contine doar un textView pentru ca noi
-    avem nevoie de un item cu un TextView in care sa afisam culoarea.
+    avem nevoie de un item cu un TextView in care sa afisam culoarea. Noi am folosit
+    simple_list_item_1
  */
 
 
@@ -84,3 +86,4 @@ public class SpinnerActivity extends AppCompatActivity {
         mSpinner = findViewById(R.id.spinner_colors);
     }
 }
+//TODO Sa apara un toast cand selectezi un item de genul: "Selected " + item.

@@ -4,7 +4,7 @@ package com.example.avramescu.androidfundamentals.week4;
 *Pasul4 - Creare Adapter
 * Clasa trebuie sa extinda RecyclerView.Adapter<ViewHolder>;
 * In cazul nostru ViewHolder-ul este CarViewHolder.
-*Alt+Enter -> implements methods
+* Alt+Enter -> implement methods
 * CarAdapter are acelasi rol ca si la Spinner adica avem un datasource si preluam elementele si le
 * afisam intr-un RecyclerView in cazul nostru si avem o lista de obiecte pe care vrem sa le afisam.
 * In adapterul nostru o sa avem o referinta catre acea lista pentru ca datasource ul o sa l preluam
@@ -13,7 +13,7 @@ package com.example.avramescu.androidfundamentals.week4;
 *
 *Avem 3 metode in clasa CarAdapter:
 * getItemCount -> ne spune cati items sa desenam, in cazul nostru, cate masini atatia items
-*onCreateViewHolder -> ViewHolderul se mapeaza cu item-ul nostru.
+*   onCreateViewHolder -> ViewHolderul se mapeaza cu item-ul nostru.
 *   Creaza noul item
 *   Se uita si vede cate are de desenat si o sa repete metoda de 20 ori si o sa populeze tot 20 de
 *       items
@@ -34,6 +34,7 @@ package com.example.avramescu.androidfundamentals.week4;
 * pe el sa decida lucrul asta.
 * Avem parametrul i in onCreate in cazul in care avem nevoie sa zice de o separare a item-ilor: ex pt
 * i-urile pare afisezi un alt layout
+*
 *       onBindViewHolder
 * Avem nevoie de i pentru a ne spune pe ce pozitie am ajuns cu desenatul.
 * Trebuie sa luam obiectul din lista de obiecte si sa preluam continutul si sa-l afisam in itemView-ul
@@ -87,7 +88,7 @@ public class CarAdapter extends RecyclerView.Adapter<CarViewHolder>{
                 // pentru ca trebuia sa fie string si e un int si i-am facut conversie
             }
         }
-    } 
+    }
 
     @Override
     public int getItemCount() {

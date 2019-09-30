@@ -45,7 +45,7 @@
 
     <!-- padding - marginea interioara a elementului
     margin este marginea comuna
-    onClick - comportamentul care se apeleaza la epelarea butonului
+    onClick - comportamentul care se apeleaza la apasarea butonului
     -->
 
     <View
@@ -64,7 +64,7 @@
         android:hint="@string/add_your_email_address"
         android:inputType="textEmailAddress" />
 
-    <!-- drawableLeft ??
+    <!-- drawableLeft - iconita afisata in stanga EditTextului
         putem seta un hint =  textul care apare in SearchView inainte de a da click
         pe spatiul liber
         inputType - setam tipul de text care se va introduce pentru a ridica tastatura

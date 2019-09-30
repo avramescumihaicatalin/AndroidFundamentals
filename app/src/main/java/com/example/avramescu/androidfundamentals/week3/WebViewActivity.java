@@ -37,14 +37,14 @@ public class WebViewActivity extends AppCompatActivity {
 
         webSettings.setJavaScriptEnabled(true); // aplicam metoda de activare a setarii de JavaScript
         /*Tells the WebView to enable JavaScript settings
-        execution.Tells the WebView to enable JavaScript execution.
+        execution. Tells the WebView to enable JavaScript execution.
         by default JavaScript is disabled
         */
 
         mWebViewAndroid.loadUrl(URL);
 //        incarca URL-ul
     }
-    /* urmeaza partea de setare a activitatii in manifes iar apoi pentru a avea acces la internet
+    /* urmeaza partea de setare a activitatii in manifest iar apoi pentru a avea acces la internet
     trebuie sa setam niste permisiuni pentru a avea acces la driverul de net.
     By default nu are acces la nimic: internet, storega... etc.
     Trebuie sa setam permisiunea de internet in manifest

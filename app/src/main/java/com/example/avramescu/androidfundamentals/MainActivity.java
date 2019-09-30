@@ -17,13 +17,14 @@ public class MainActivity extends AppCompatActivity {
 *   conventie - Identificatori:
 *                   m pentru membru al clasei
 *                   s static
-*                   CAPSLOCK constanta
+*                   UPPERCASE constanta
 *               Metode:
 *                   camelCaseRule
 *
 * Initializarea se face in onCreate();
 *
-* Vreau sa scriu ceva in EditText, apas pe buton si sa mi se preia texul din EditText si sa l afiseze inTextView
+* 1) Vreau sa scriu ceva in EditText, apas pe buton si sa mi se preia texul din EditText si sa l
+* afiseze in TextView
 *
 * 2) Cand apasa pe buton ratingBar sa aiba visibility = gone
 * */
@@ -61,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void btnHelloOnClick(View view) {
         if(mEditTextEmail != null){
-            String email = mEditTextEmail.getText().toString(); //  conversie la toString pentru ca el en da un Editable
+            String email = mEditTextEmail.getText().toString(); //  conversie la toString pentru ca el ne da un Editable
             if(email != null && !email.isEmpty()){
                 mTextViewHello.setText(email);
             }else{

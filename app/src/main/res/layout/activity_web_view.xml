@@ -10,7 +10,7 @@
     E folosit sa afiseze pagini web. E ca un mini browser.
     Il adaugam in Layout si din partea de Java ii setam un URL pe care-l incarcam in WebView.
     Trebuie sa setam pe true setJavaScriptEnabled(boolean b); din java.
-    By default nu suport script-uri din JavaScript.
+    By default nu suporta script-uri din JavaScript.
     apelam metoda loadUrl(String URL); care incarca pagina web.
     -->
 

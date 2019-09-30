@@ -15,7 +15,7 @@ package com.example.avramescu.androidfundamentals.week4;
 * Acest constructor are un view ca parametru, este de fapt View-ul asociat unui item.(relatie 1:1)
 * Ca sa preluam elementele ca in onCreate facem: itemView.findViewById
 * Cu findViewById nu le gaseste pentru ca in contextul activitatii atunci cand eu dadeam findViewById
-* acea metoda se referea strinct la contextul layout-ului( stia ca el trebuie sa caute elementele in
+* acea metoda se referea strict la contextul layout-ului( stia ca el trebuie sa caute elementele in
 * layout-ul asociat activitatii). In cazul nostru nu avem activitate asociata si contextul lui e
 * itemView-ul si ca sa preluam elementul trebuie sa facem referire la itemView.
 * itemView.findViewById ...
