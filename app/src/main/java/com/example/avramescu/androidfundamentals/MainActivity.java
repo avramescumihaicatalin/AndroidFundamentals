@@ -85,6 +85,5 @@ public class MainActivity extends AppCompatActivity {
 }
 
 /*
-* CodeChallenge - proiect
 * drawableLeft si alegem un icon il deseneaza in stanga dar in interiorul TextView-ului
 * */

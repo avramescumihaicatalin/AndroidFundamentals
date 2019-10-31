@@ -11,7 +11,7 @@ import java.net.URL;
 
 public class WebViewActivity extends AppCompatActivity {
 //    pentru a crea un WebView avem nevoie de un URL
-    // psf -> scurtatura pentru public static final
+//    psf -> scurtatura pentru public static final
 
     public static final String URL = "https://developer.android.com/"; // definim o constanta ce va
     //reprezenta url-ul nostru.
