@@ -55,11 +55,12 @@ import android.view.ViewGroup;
 import com.example.avramescu.androidfundamentals.R;
 
 import java.util.List;
+import java.util.Locale;
 
 public class CarAdapter extends RecyclerView.Adapter<CarViewHolder>{
-    List<Car> mCars;
+    private List<Car> mCars;
 
-    public CarAdapter(List<Car> mCars) {
+    CarAdapter(List<Car> mCars) {
         this.mCars = mCars;
     }
 
@@ -80,12 +81,11 @@ public class CarAdapter extends RecyclerView.Adapter<CarViewHolder>{
             if(currentCar.getmNume() != null ){
                 carViewHolder.getmTextViewName().setText(currentCar.getmNume());
             }
-            if(currentCar.getmNume() != null){
+            if(currentCar.getmCuloare() != null){
                 carViewHolder.getmTextViewColor().setText(currentCar.getmCuloare());
             }
             if(currentCar.getmHp() > 0){
-                carViewHolder.getmTextViewHp().setText(currentCar.getmHp() + "");// am pus + ""
-                // pentru ca trebuia sa fie string si e un int si i-am facut conversie
+                carViewHolder.getmTextViewHp().setText(String.format(new Locale("Ro") , "%d", currentCar.getmHp()));
             }
         }
     }

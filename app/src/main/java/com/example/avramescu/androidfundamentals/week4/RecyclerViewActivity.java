@@ -70,6 +70,7 @@ import java.util.ArrayList;
  *
  * */
 
+
 public class RecyclerViewActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerViewCars;

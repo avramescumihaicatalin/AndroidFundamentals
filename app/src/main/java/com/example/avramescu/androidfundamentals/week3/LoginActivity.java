@@ -2,7 +2,6 @@ package com.example.avramescu.androidfundamentals.week3;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -44,8 +43,7 @@ public class LoginActivity extends AppCompatActivity {
             String email = mEditTextEmail.getText().toString();
             String phone = mEditTextPhone.getText().toString();
             String terms = String.valueOf(mCheckBoxTerms.isChecked());
-//            mTextViewResult.setText("Email introdus: " + email + "Numar de telefon introdus: " + phone + "T&c: " + terms);
-            mTextViewResult.setText("asadadad");
+            mTextViewResult.setText(String.format("Email introdus: %sNumar de telefon introdus: %sT&c: %s", email, phone, terms));
 
             //TODO create an Authentication object(class) in order to map the data from fields
             //salvam datele de autentificare in obiect, suprascriem toString si folosind toString
@@ -57,12 +55,12 @@ public class LoginActivity extends AppCompatActivity {
     private boolean isEmailValid() {
         if(mEditTextEmail != null){
             String email = mEditTextEmail.getText().toString();
-            if(!email.isEmpty() && email != null){
-                boolean b = new EmailHelper().isEmailValid(email);
-                if(b == true) {
+            if(!email.isEmpty()){
+                boolean b = EmailHelper.isEmailValid(email);
+                if(b) {
                     return true;//email a fost introdus corect
                 }else{
-                    Toast.makeText(this, "Nu se respecta patter-ul de email", Toast.LENGTH_LONG);
+                    Toast.makeText(this, "Nu se respecta patter-ul de email", Toast.LENGTH_LONG).show();
                     return false;
                 }
             }else{
@@ -70,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                 return false;
             }
         }else{
-            Toast.makeText(LoginActivity.this, "Please make edit_text_email not null", Toast.LENGTH_LONG);
+            Toast.makeText(LoginActivity.this, "Please make edit_text_email not null", Toast.LENGTH_LONG).show();
             return false;
         }
     }
@@ -78,14 +76,14 @@ public class LoginActivity extends AppCompatActivity {
     private boolean isPhoneValid() {
         if(mEditTextPhone != null){
             String phone = mEditTextPhone.getText().toString();
-            if(phone != null && !phone.isEmpty()){
+            if(!phone.isEmpty()){
                 return true;
             }else{
                 mEditTextPhone.setError("Please introduce your number");
                 return false;
             }
         }else{
-            Toast.makeText(LoginActivity.this, "Please make edit_text_phone not null", Toast.LENGTH_LONG);
+            Toast.makeText(LoginActivity.this, "Please make edit_text_phone not null", Toast.LENGTH_LONG).show();
             return false;
         }
     }
@@ -95,12 +93,12 @@ public class LoginActivity extends AppCompatActivity {
             if(mCheckBoxTerms.isChecked()){
                 return true;
             }else{
-                Toast.makeText(LoginActivity.this, "Please check T&C", Toast.LENGTH_LONG);
+                Toast.makeText(LoginActivity.this, "Please check T&C", Toast.LENGTH_LONG).show();
                 return false;
             }
 
         }else{
-            Toast.makeText(LoginActivity.this, "Please make checkbox_terms not null", Toast.LENGTH_LONG);
+            Toast.makeText(LoginActivity.this, "Please make checkbox_terms not null", Toast.LENGTH_LONG).show();
             return false;
         }
 

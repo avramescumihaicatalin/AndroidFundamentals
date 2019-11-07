@@ -47,7 +47,7 @@ public class CarViewHolder extends RecyclerView.ViewHolder{
     }
 
 
-    public TextView getmTextViewName() {
+    TextView getmTextViewName() {
         return mTextViewName;
     }
 
@@ -55,7 +55,7 @@ public class CarViewHolder extends RecyclerView.ViewHolder{
         this.mTextViewName = mTextViewName;
     }
 
-    public TextView getmTextViewColor() {
+    TextView getmTextViewColor() {
         return mTextViewColor;
     }
 
@@ -63,7 +63,7 @@ public class CarViewHolder extends RecyclerView.ViewHolder{
         this.mTextViewColor = mTextViewColor;
     }
 
-    public TextView getmTextViewHp() {
+    TextView getmTextViewHp() {
         return mTextViewHp;
     }
 
