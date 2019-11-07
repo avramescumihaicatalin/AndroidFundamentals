@@ -2,7 +2,7 @@ package com.example.avramescu.androidfundamentals.week4;
 
 /*
 * Pasul1:
-* Definim ViewHolder-ul adica obiectul pe care o sa-l afisam in fiecare item din lista noastra.
+* Definim Modelul adica obiectul pe care o sa-l afisam in fiecare item din lista noastra.
 * Cream clasa Car si-i definim niste proprietati pe care le are masina.
 * Cream gett-eri si sett-eri( Alt + Insert )
 *
@@ -15,13 +15,13 @@ public class Car {
     private String mCuloare;
     private int mHp;
 
-    public Car(String mNume, String mCuloare, int mHp) {
+    Car(String mNume, String mCuloare, int mHp) {
         this.mNume = mNume;
         this.mCuloare = mCuloare;
         this.mHp = mHp;
     }
 
-    public String getmNume() {
+    String getmNume() {
         return mNume;
     }
 
@@ -29,7 +29,7 @@ public class Car {
         this.mNume = mNume;
     }
 
-    public String getmCuloare() {
+    String getmCuloare() {
         return mCuloare;
     }
 
@@ -37,7 +37,7 @@ public class Car {
         this.mCuloare = mCuloare;
     }
 
-    public int getmHp() {
+    int getmHp() {
         return mHp;
     }
 

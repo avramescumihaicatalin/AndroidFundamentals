@@ -10,54 +10,51 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LOGIN"
+        android:text="@string/label_login"
         android:textStyle="bold"
         android:textSize="40sp"
-        android:textColor="@android:color/holo_orange_dark"
-        />
+        android:textColor="@android:color/holo_orange_dark" />
 
     <EditText
         android:id="@+id/edit_text_email_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"
-        android:textSize="25dp"
+        android:hint="@string/label_email"
+        android:textSize="25sp"
         android:inputType="textEmailAddress"
-        />
+        tools:ignore="autoFill"/>
 
     <EditText
         android:id="@+id/edit_text_phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Phone"
+        android:hint="@string/label_phone"
         android:textSize="26sp"
         android:inputType="phone"
-        />
+        tools:ignore="autoFill"/>
 
     <CheckBox
         android:id="@+id/checkbox_terms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I accept Terms and Conditions"
-        android:textSize="16sp"
-        />
+        android:text="@string/label_terms_and_conditions"
+        android:textSize="16sp"/>
     
     <Button
         android:onClick="submitDataOnClick"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SUBMIT"
+        android:text="@string/label_submit"
         android:background="@android:color/holo_blue_dark"
         android:textColor="@android:color/white"
-        android:layout_marginTop="@dimen/general_margin"
-        />
+        android:layout_marginTop="@dimen/general_margin"/>
 
     <TextView
         android:id="@+id/text_view_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:layout_marginTop="@dimen/general_margin"
-        android:text="Alabalaportocala"
-        />
+        tools:text="Alabalaportocala"/>
+
 </LinearLayout>
