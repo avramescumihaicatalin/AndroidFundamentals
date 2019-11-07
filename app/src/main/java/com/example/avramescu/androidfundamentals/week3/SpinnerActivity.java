@@ -2,6 +2,8 @@ package com.example.avramescu.androidfundamentals.week3;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -11,7 +13,7 @@ import com.example.avramescu.androidfundamentals.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SpinnerActivity extends AppCompatActivity {
+public class SpinnerActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     /*
      * Pentru a crea un Spinner avem nevoie de:
@@ -41,13 +43,14 @@ public class SpinnerActivity extends AppCompatActivity {
         initView();// initializare Spinner
         setColors(); // creat dataSource-ul
         setAdapter(); // metoda care creaza si seteazaAdapterul
+        mSpinner.setOnItemSelectedListener(this);
     }
 
 /*    am facut overEngeniering asa ca am renuntat la metoda getAdapter si am implementat
     functionalitatea ei in setAdapter
  */
     private ArrayAdapter<String> getAdapter(){ // creaza Adapterul
-        return new ArrayAdapter<String>(SpinnerActivity.this,
+        return new ArrayAdapter<>(SpinnerActivity.this,
                 android.R.layout.simple_list_item_1, mColors);
     }
         /*
@@ -66,7 +69,7 @@ public class SpinnerActivity extends AppCompatActivity {
 
     private void setAdapter() { // setamAdapterul
         //mSpinner.setAdapter(getAdapter());
-        mSpinner.setAdapter(new ArrayAdapter<String>(SpinnerActivity.this,
+        mSpinner.setAdapter(new ArrayAdapter<>(SpinnerActivity.this,
                 android.R.layout.simple_list_item_1,
                 mColors));
     }
@@ -85,5 +88,15 @@ public class SpinnerActivity extends AppCompatActivity {
     private void initView() {
         mSpinner = findViewById(R.id.spinner_colors);
     }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        Toast.makeText(this, "Selected: " + mSpinner.getItemAtPosition(position), Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+        Toast.makeText(this, "Please select an item from dropdown list!", Toast.LENGTH_SHORT).show();
+        //TODO not reached
+    }
 }
-//TODO Sa apara un toast cand selectezi un item de genul: "Selected " + item.
