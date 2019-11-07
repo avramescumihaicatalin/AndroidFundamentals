@@ -42,12 +42,9 @@ public class LoginActivity extends AppCompatActivity {
         if(isEmailValid() && isPhoneValid() && isCheckboxChecked()){
             String email = mEditTextEmail.getText().toString();
             String phone = mEditTextPhone.getText().toString();
-            String terms = String.valueOf(mCheckBoxTerms.isChecked());
-            mTextViewResult.setText(String.format("Email introdus: %sNumar de telefon introdus: %sT&c: %s", email, phone, terms));
-
-            //TODO create an Authentication object(class) in order to map the data from fields
-            //salvam datele de autentificare in obiect, suprascriem toString si folosind toString
-            // sa afisam datele in TextView
+            boolean terms = mCheckBoxTerms.isChecked();
+            LoginDetails loginDetails = new LoginDetails(email, phone, terms);
+            mTextViewResult.setText(loginDetails.toString());
         }
 
     }
@@ -57,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
             String email = mEditTextEmail.getText().toString();
             if(!email.isEmpty()){
                 boolean b = EmailHelper.isEmailValid(email);
-                if(b) {
+                if( b ) {
                     return true;//email a fost introdus corect
                 }else{
                     Toast.makeText(this, "Nu se respecta patter-ul de email", Toast.LENGTH_LONG).show();
