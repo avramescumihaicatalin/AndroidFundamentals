@@ -7,8 +7,6 @@ import android.webkit.WebView;
 
 import com.example.avramescu.androidfundamentals.R;
 
-import java.net.URL;
-
 public class WebViewActivity extends AppCompatActivity {
 //    pentru a crea un WebView avem nevoie de un URL
 //    psf -> scurtatura pentru public static final

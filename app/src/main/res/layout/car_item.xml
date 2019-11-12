@@ -14,14 +14,13 @@
     Afisam numele intr-un textView;
 
     Pasul3
-    Facem ViewHolder-ul -> facem o clasa noua CarViewHolder♦
+    Facem ViewHolder-ul -> facem o clasa noua CarViewHolder
     -->
 
     <TextView
         android:id="@+id/text_view_name"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
+        android:layout_height="wrap_content"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,15 +30,13 @@
             android:id="@+id/text_view_color"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="3"
-            />
+            android:layout_weight="3"/>
 
         <TextView
             android:id="@+id/text_view_hp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="3"
-            />
+            android:layout_weight="3"/>
 
 
     </LinearLayout>
