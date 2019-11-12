@@ -1,7 +1,6 @@
 package com.example.avramescu.androidfundamentals.week5;
 
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -107,7 +106,7 @@ public class FirstActivity extends AppCompatActivity {
  *          onResume() si e din nou vizibila si putem interactiona cu ea.
  *
  *  !La codechallenge o sa avem sa suprascriem toate metodele si sa punem cate un log in fiecare metoda
- *  si sa urmarim logul pentru a vedea ordinea de executie. Textare si cu alta activitate si cu alta
+ *  si sa urmarim logul pentru a vedea ordinea de executie. Testare si cu alta activitate si cu alta
  *  aplicatie si daca distrugem aplicatia.
  *
  *      Intent
@@ -118,7 +117,9 @@ public class FirstActivity extends AppCompatActivity {
  *      Implicit - folosim Intentul sa pornim o activitate existenta deja in sistem ( intr-o aplicatie
  *          avem iconul de phone ce ne permite sa sunam. Folosim un intent implicit pentru  ca activitatea
  *          de call e deja definita in sistem si o putem apela direct).
+ *
  *  Intrebare de interviu: cate tipuri de intenturi exista?
+ *
  *  La intent implicit trebuie sa setam niste proprietati.( data si extras )
  *      data - este o bucata de informatie a carei locatie poate fi reprezentata de un URI
  *      extras - una sau mai multe bucati de informatii ca o colectii de perechi cheie-valoare
@@ -154,7 +155,7 @@ public class FirstActivity extends AppCompatActivity {
   *      <data> - tipul de data acceptat
   *      <category> - categoria intentului ( ex: android.intent.category.BROWSABLE )
   *
-  * Moduri de lansare a unei activitati: ( proprietatea launchMode in xml )
+  * Moduri de lansare a unei activitati: ( proprietatea launchMode in MANIFEST in tag-ul <activity/> )
   *     standard: O noua activitate este lansata si adaugata catre stiva de intoarcere a task-ului
   * curent. O activitate poate fi instantiata de mai multe ori, un singur task poate avea mai
   * multe instante ale aceleiasi activitati si mai multe instante pot apartine diferitor task-uri.
@@ -196,8 +197,9 @@ public class FirstActivity extends AppCompatActivity {
  *  constante. Atunci cand trimitem mesajul din activitatea1 in activitatea2 il trimite cu cheia
  *  cheie1, in activitatea2 daca vrem sa-l preluam trebuie sa avem aceeasi cheie cheie1. De aceeea nu
  *  e bine sa mergem pe varianta hardcodata si mai bine folosim constante.
- *  Pentru preluare folosim clasa Bundle. Cream un obiect de tip Bundle = getIntent().getExtras();
- *  Preluam intentul si apelam comportamentul getExtras. Aici e la pluram Extras fata de Extra
+ *  Pentru preluare folosim clasa Bundle. Cream un obiect de tip Bundle:
+ *      Bundle bundle = getIntent().getExtras();
+ *  Preluam intentul si apelam comportamentul getExtras. Aici e la plural Extras fata de Extra
  *  asta inseamna ca in activitatea1 pot apela de mai multe ori putExtra si cu getExtras le preia
  *  pe toate. Pentru a prelua doar un anumit element trimis din activitatea1 folosim cheia
  *  Apelam din obiectul de tip bundle comportamentul getString(cheie1);
