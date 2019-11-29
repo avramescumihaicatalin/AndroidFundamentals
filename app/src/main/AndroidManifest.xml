@@ -13,16 +13,16 @@
         android:theme="@style/AppTheme">
         <activity android:name=".week5.SecondActivity"></activity>
         <activity android:name=".week5.FirstActivity" >
-
-        </activity>
-        <activity android:name=".week4.ConstraintLayoutActivity" />
-        <activity android:name=".week4.RecyclerViewActivity" />
-        <activity android:name=".week3.SpinnerActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".week4.ConstraintLayoutActivity" />
+        <activity android:name=".week4.RecyclerViewActivity" />
+        <activity android:name=".week3.SpinnerActivity" >
+
         </activity>
         <activity android:name=".week3.WebViewActivity" />
         <activity android:name=".MainActivity" >
