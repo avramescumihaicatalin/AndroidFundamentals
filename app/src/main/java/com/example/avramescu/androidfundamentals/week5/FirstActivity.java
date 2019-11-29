@@ -190,18 +190,17 @@ public class FirstActivity extends AppCompatActivity {
  *  doar lucruri limitate, nu putem trimite obiecte sau liste de obiecte dar putem trimite un int,
  *  boolean, de obicei primitive.
  *  Vreau intr-o activitate sa scriu un nume si in cealalta activitate sa zica: Hello + nume.
- *  Avem intentul ca pana acum si apelam metoda putExstra("Cheie", "Valoare") pe care o apelam
- *  din intent.
+ *  Avem instanta de intent ca pana acum si apelam din ea metoda putExtra("Cheie", "Valoare").
  *  Cheia o sa fie intotdeauna un String. Valoarea poate fi: int, String, boolean etc. Pentru a nu ne
  *  incurca in chei folosim constante. Fie o definim in cadrul activitatii fie ne cream un fisier de
  *  constante. Atunci cand trimitem mesajul din activitatea1 in activitatea2 il trimite cu cheia
- *  cheie1, in activitatea2 daca vrem sa-l preluam trebuie sa avem aceeasi cheie cheie1. De aceeea nu
+ *  cheie1. In activitatea2 daca vrem sa-l preluam trebuie sa avem aceeasi cheie cheie1. De aceeea nu
  *  e bine sa mergem pe varianta hardcodata si mai bine folosim constante.
  *  Pentru preluare folosim clasa Bundle. Cream un obiect de tip Bundle:
  *      Bundle bundle = getIntent().getExtras();
  *  Preluam intentul si apelam comportamentul getExtras. Aici e la plural Extras fata de Extra
  *  asta inseamna ca in activitatea1 pot apela de mai multe ori putExtra si cu getExtras le preia
- *  pe toate. Pentru a prelua doar un anumit element trimis din activitatea1 folosim cheia
+ *  pe toate. Pentru a prelua doar un anumit element trimis din activitatea1 folosim cheia aferenta.
  *  Apelam din obiectul de tip bundle comportamentul getString(cheie1);
  *
  *  PutExtra o sa-l folosim la proiectul final la RecyclerView.
