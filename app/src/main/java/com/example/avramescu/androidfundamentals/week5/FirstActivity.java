@@ -1,7 +1,6 @@
 package com.example.avramescu.androidfundamentals.week5;
 
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -59,6 +58,16 @@ public class FirstActivity extends AppCompatActivity {
             }
         }
     }
+
+    public void btnStartActivityForResultsOnClick(View view) {
+        Intent intentActivityForResults = new Intent(FirstActivity.this, ForResultActivity1.class);
+        startActivity(intentActivityForResults);
+    }
+
+    public void startDebugActivityOnClick(View view) {
+        Intent intentActivityForResults = new Intent(FirstActivity.this, DebugActivity.class);
+        startActivity(intentActivityForResults);
+    }
 }
 
 /*
@@ -110,6 +119,7 @@ public class FirstActivity extends AppCompatActivity {
  *  si sa urmarim logul pentru a vedea ordinea de executie. Textare si cu alta activitate si cu alta
  *  aplicatie si daca distrugem aplicatia.
  *
+ *  **********************
  *      Intent
  *  Intentia = dorinta de a face ceva ( pornesti de la ceva si vrei sa ajungi in alta parte )
  *  In Android una dintre utilizarile intentului este sa ne mutam dintr-o activitate in alta activitate.
@@ -169,6 +179,7 @@ public class FirstActivity extends AppCompatActivity {
   *     singleInstance: La fel ca singleTask cu exceptia ca sistemul nu lanseaza orice alta activitate
   * in task tinand instanta de activitate. Activitatea este mereu singurul membru al task ului.
   *
+ *  **********************
   *Intent flags:
   *     FLAG_ACTIVITY_NEW_TASK: porneste o activitate intr-un task nou. Acest comportament
   * este acelasi ca pentru modul de lansare: singleTask.
@@ -183,6 +194,7 @@ public class FirstActivity extends AppCompatActivity {
  *
  * Vreau sa pun un buton in FirstActivity, cand apas pe buton ma mut in cea de-a doua.
  *
+ *  **********************
  *  Bundle
  *  E ca un fel de postas. Avem cele doua activitati si e nevoie uneori sa trimitem informatie dintr-o
  *  activitate in cealalta activitate si asta se poate face prin intermediul Bundleului. Putem trimite
@@ -222,5 +234,43 @@ public class FirstActivity extends AppCompatActivity {
   *
   *  In activitatea1 putem un EditText si un Button. Scriu ceva in EditText iar cand apas pe buton
   *  ma mut in activitatea2 si afisez mesajul scris in activitatea1.
+  *
+  *  **********************
+  *     StartActivityForResults
+  *     Ne muta din prima activitatea curenta in alta activitate insa in plus cea de-a doua activitate
+  * trebuie sa-i trimita un result inapoi primeia. Metoda startActivityForResults() e partea prin care
+  * ma mut din activitatea1 in activitatea2 pentru a prelua ceva din activitatea2 si e strans legata
+  * de metoda onActivityResults. Cand ma intorc din activitatea2 in activitatea1 cu acel obiect, in
+  * activitatea1 o sa se declanseze onActivityResult().
+  * ex: activitatea1 porneste galeria pentru a lasa userul sa aleaga o poza si apoi ma intorc in
+  * activitatea1 pentru a afisa-o.
+  * ex: activitatea1 porneste o lista cu numere de telefon, aleg si preiau un numar de acolo.
+  * startActivityForResults e foarte buna pentru intenturi implicite.
+  * startActivityForResults() are doi parametri:
+  *     intent data
+  *     int requestCode - identificare a orderului adica daca trimit acel cod, tot pe acel cod trebuie sa
+  * primesc si rezultatul.  E o modalitate de a identifica acel canal de comunicare intre cele doua
+  * activitati.
+  * onActivityResult() are parametri:
+  *     int requestCode - codul de identificare
+  *     int resultCode - cod care ne spune daca actiunea a esuat sau a fost efectuata cu succes
+  *     intent data - data care e putin diferit fata de data folosit trimis pana acum
+  * In activitatea2 pentru a trimite ceva inapoi trebuie sa apelam metoda setResult();
+  * Are doi parametri:
+  *     resultCode - care poate fi OK sau CANCELED.
+  *     data - ce se trimite mai departe.
+  *De obicei dupa aceasta metoda se apeleaza metoda finish(); Ea distruge activitatea curenta.
+  * Activitatea curenta intra pe fluxul de onPause, onStop, onDestroy.
+  *
+  *     onSavedInstanceState() + onRestoreInstanceState()
+  * Pe langa metodele de la activity life-cycle mai exista si altele.
+  * Exista situatii cand se schimba configuratia: rotim telefonul, schimbam limba si se vor pierde
+  * datele din ecran daca nu au fost salvate.
+  * Ca sa nu pierdem datele exista posibiliatea sa facem un fel de cache adica atunci cand intervine
+  * o schimbare de stare sa reinstantieze starea de dinainte de schimbare.
+  * Salvarea datelor se bazeaza pe Bundle.
+  * La schimbarea de configurarea activitatea se recreaza.
+  *
+  *
   *
  * */

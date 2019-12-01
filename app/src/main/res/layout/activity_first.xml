@@ -5,21 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".week5.FirstActivity"
-    android:layout_margin="24dp">
+    android:layout_margin="48dp">
 
     <Button
         android:id="@+id/button_start_second_activity"
         android:layout_width="wrap_content"
         android:layout_height="52dp"
-        android:layout_marginStart="163dp"
-        android:layout_marginLeft="163dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="160dp"
-        android:layout_marginRight="160dp"
         android:onClick="startSecondactivityOnClick"
         android:text="@string/start_second_activity"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,15 +21,10 @@
         android:id="@+id/button_implicit_intent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="189dp"
-        android:layout_marginLeft="189dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="134dp"
-        android:layout_marginRight="134dp"
+        android:layout_margin="16dp"
         android:onClick="callImplicitIntentOnClick"
         android:text="@string/call_implicit_intent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.823"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_start_second_activity" />
 
@@ -44,6 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:layout_margin="16dp"
         android:inputType="textPersonName"
         android:hint="@string/hint_name"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,10 +46,32 @@
         android:id="@+id/button_send_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:text="@string/hint_send_message"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextMessage"
-        android:onClick="sendMessageOnClick"
-        />
+        android:onClick="sendMessageOnClick"/>
+
+    <Button
+        android:id="@+id/button_activity_for_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:onClick="btnStartActivityForResultsOnClick"
+        android:text="@string/start_activity_for_result_example"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_send_message" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/label_debug_activity"
+        android:onClick="startDebugActivityOnClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_activity_for_result" />
+
 </android.support.constraint.ConstraintLayout>
