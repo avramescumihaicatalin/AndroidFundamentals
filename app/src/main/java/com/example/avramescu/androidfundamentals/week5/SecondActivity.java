@@ -27,6 +27,7 @@ public class SecondActivity extends AppCompatActivity {
         if(dataReceived != null){
             mesaj = dataReceived.getString(FirstActivity.CHEIE);
             //String messageReceived = getIntent().getStringExtra(FirstActivity.MESSAGE);
+            //cele doua sunt echivalente
         }
         if(mTextViewMessage != null && !TextUtils.isEmpty(mesaj) && mesaj != null){
             mTextViewMessage.setText(mesaj);
