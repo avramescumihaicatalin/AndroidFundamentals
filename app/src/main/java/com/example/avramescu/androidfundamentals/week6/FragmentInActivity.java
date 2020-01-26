@@ -112,9 +112,12 @@ public class FragmentInActivity extends AppCompatActivity {
     *   <include> seamana cu import-ul din java. Unde este folosit poti adauga un alt layout folosind
     * acest tag ca si cum l-as copia cu totul acolo.
     *   Crem un NavigationDrawer cu new Activity-> Navigation Drawer Activity
+    * Mi-a creat NavigationActivity, apoi layout-ul asociat.
+    * In content_navigation trebuie sa inseram frame layout si aici o sa inseram fragmentele la code
+    * challenge.
+    * In layout-ul activitatii am un header layout si un ??? si are si un meniu care contine de fapt
+    * itemii pe care-i vom afisa.
     *
-    * 1:08 curs6-2
-    * Mi-a creat NavigationActivity, apoi layout-ul
     *
     *
     * */

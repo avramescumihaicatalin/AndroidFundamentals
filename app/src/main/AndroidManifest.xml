@@ -11,17 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".week6.NavigationActivity"
-            android:label="@string/title_activity_navigation"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".week6.FragmentInActivity">
+        <activity android:name=".week6.LengthActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".week6.SumActivity">
+
+        </activity>
+        <activity
+            android:name=".week6.NavigationActivity"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".week6.FragmentInActivity"></activity>
         <activity android:name=".week5.DebugActivity" />
         <activity android:name=".week5.ForResultActivity2" />
         <activity android:name=".week5.ForResultActivity1" />
