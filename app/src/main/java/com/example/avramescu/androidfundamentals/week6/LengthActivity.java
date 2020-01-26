@@ -4,6 +4,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.avramescu.androidfundamentals.R;
@@ -11,6 +13,7 @@ import com.example.avramescu.androidfundamentals.R;
 public class LengthActivity extends AppCompatActivity implements LengthListener{
 
     TextView mTextViewActivityLength;
+    Button mButtonSendDataToFragmentWithListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,18 +22,27 @@ public class LengthActivity extends AppCompatActivity implements LengthListener{
 
         initView();
         replaceFragment();
+
     }
 
     private void replaceFragment() {
-        LengthFragment lengthFragment = new LengthFragment();
+        final LengthFragment lengthFragment = new LengthFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.container_fragment_length, lengthFragment);
         fragmentTransaction.commit();
+
+        mButtonSendDataToFragmentWithListener.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lengthFragment.displayLength(mTextViewActivityLength.getText().toString());
+            }
+        });
     }
 
     private void initView() {
         mTextViewActivityLength = findViewById(R.id.text_view_length);
+        mButtonSendDataToFragmentWithListener = findViewById(R.id.button_send_data_to_fragment_with_listener);
     }
 
     @Override

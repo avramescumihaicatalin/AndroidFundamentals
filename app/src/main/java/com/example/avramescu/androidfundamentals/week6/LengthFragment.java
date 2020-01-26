@@ -13,7 +13,7 @@ import android.widget.EditText;
 
 import com.example.avramescu.androidfundamentals.R;
 
-public class LengthFragment extends Fragment {
+public class LengthFragment extends Fragment implements LengthListener{
 
     EditText mEditTextFragmentInput;
     Button mButtonGetLength;
@@ -50,5 +50,10 @@ public class LengthFragment extends Fragment {
     private void initView(View view) {
         mEditTextFragmentInput = view.findViewById(R.id.edit_text_input);
         mButtonGetLength = view.findViewById(R.id.btn_get_length);
+    }
+
+    @Override
+    public void displayLength(String value) {
+        mEditTextFragmentInput.setText("received text from activity: " + value + " length:" + value.length());
     }
 }

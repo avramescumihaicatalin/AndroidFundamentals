@@ -31,7 +31,15 @@
         android:layout_marginRight="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"/>
 
-    </FrameLayout>
+    <Button
+        android:id="@+id/button_send_data_to_fragment_with_listener"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/send_data_to_fragment_with_listener"
+        app:layout_constraintTop_toBottomOf="@id/text_view_length"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"/>
 </android.support.constraint.ConstraintLayout>
