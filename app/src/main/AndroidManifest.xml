@@ -3,6 +3,7 @@
     package="com.example.avramescu.androidfundamentals">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
 
     <application
         android:allowBackup="true"
@@ -11,22 +12,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".week7.AnimationActivity">
+        <activity android:name=".week7.PermisionsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".week7.MaterialDesignActivity">
+        <activity android:name=".week6.navigation.NavigationScratchActivity">
 
         </activity>
-        <activity android:name=".week6.LengthActivity"></activity>
+        <activity android:name=".week7.AnimationActivity" />
+        <activity android:name=".week7.MaterialDesignActivity" />
+        <activity android:name=".week6.LengthActivity" />
         <activity android:name=".week6.SumActivity" />
         <activity
             android:name=".week6.NavigationActivity"
             android:label="@string/title_activity_navigation"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".week6.FragmentInActivity" />
         <activity android:name=".week5.DebugActivity" />
         <activity android:name=".week5.ForResultActivity2" />

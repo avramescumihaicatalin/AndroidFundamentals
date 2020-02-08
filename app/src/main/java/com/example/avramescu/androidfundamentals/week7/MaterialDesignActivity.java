@@ -86,7 +86,14 @@ public class MaterialDesignActivity extends AppCompatActivity {
     * interiorul caruia adaugam un EditText.
     *   ColapsingToolbar: se bazeaza pe CoordinatorLayout care iti permite sa faci scroll
     *
-    *
+    *       Permisiuni
+    *   La inceput pe magazin aveai o lista de permisiuni de care avea nevoie aplicatia, prin instalare
+    * iti dadeai acceptul. Din android M s-au introdus permisiunile la Runtime, totusi nu se aplica
+    * pentru toate tipurile de permisiuni. Pentru permisiunea de internet nu se cere userului permisiunea
+    * ci se pune in manifest. In schimb la camera, locatie, microfon etc. se cere userului.
+    *   Best practice: Se explica foarte bine de ce este nevoie de permisiune. Se cere permisiune fix
+    * acolo unde este nevoie de ea.
+    * 
     *
     * */
 }
