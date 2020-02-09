@@ -94,4 +94,5 @@
     <string name="ic_item_communicate">Communicate</string>
     <string name="sum">SUM</string>
     <string name="send_data_to_fragment_with_listener">send data to fragment with listener</string>
+    <string name="title_activity_navigation_template">NavigationTemplateActivity</string>
 </resources>
