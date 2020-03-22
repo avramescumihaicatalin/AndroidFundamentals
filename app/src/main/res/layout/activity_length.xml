@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".week6.LengthActivity">
+    tools:context=".week6.fragment.LengthActivity">
 
     <TextView
         android:id="@+id/text_view_length"

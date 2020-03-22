@@ -1,7 +1,9 @@
 package com.example.avramescu.androidfundamentals.week7;
 
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.avramescu.androidfundamentals.R;
 
@@ -11,6 +13,28 @@ public class MaterialDesignActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_material_design);
+    }
+
+    public void displayDatePickOnClick(View view) {
+    }
+
+    public void displayTimePickOnClick(View view) {
+    }
+
+    public void displayAlertdialogWitButtonsOnClick(View view) {
+    }
+
+    public void startPermissionActivity(View view) {
+    }
+
+    public void takePictureOnClick(View view) {
+    }
+
+    public void startCollapsingToolbarActivity(View view) {
+    }
+
+    public void displaySnackBarOnClick(View view) {
+        Snackbar.make(view, "This is a snakcbar", Snackbar.LENGTH_LONG);
     }
 
     /*  Stiluri

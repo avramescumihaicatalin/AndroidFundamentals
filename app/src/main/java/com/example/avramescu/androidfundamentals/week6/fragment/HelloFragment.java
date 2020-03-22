@@ -1,4 +1,4 @@
-package com.example.avramescu.androidfundamentals.week6;
+package com.example.avramescu.androidfundamentals.week6.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

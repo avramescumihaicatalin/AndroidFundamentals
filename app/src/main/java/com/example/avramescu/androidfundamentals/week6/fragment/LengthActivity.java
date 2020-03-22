@@ -1,4 +1,4 @@
-package com.example.avramescu.androidfundamentals.week6;
+package com.example.avramescu.androidfundamentals.week6.fragment;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;

@@ -95,4 +95,27 @@
     <string name="sum">SUM</string>
     <string name="send_data_to_fragment_with_listener">send data to fragment with listener</string>
     <string name="title_activity_navigation_template">NavigationTemplateActivity</string>
+    <string name="display_datepicker">Display Date picker</string>
+    <string name="display_timepicker">Display Time picker</string>
+    <string name="display_alert_dialog_with_buttons">Display alert dialog with buttons</string>
+    <string name="permission_activity">Permission activity</string>
+    <string name="take_a_picture">Take a picture</string>
+    <string name="collapsing_toolbar">Colapsing toolbar</string>
+    <string name="week_2">week 2</string>
+    <string name="week_3_login">week3 Login</string>
+    <string name="week_3_spinner">week 3 Spinner</string>
+    <string name="week_3_viewgroup">week 3 View Group</string>
+    <string name="week_3_webview">week 3 Web View</string>
+    <string name="week_4_recyclerview">week 4 Recycler View</string>
+    <string name="week_4_constraintlayout">week 4 Constraint Layout</string>
+    <string name="week_5_first_activity">week 5 First Activity</string>
+    <string name="week_5_first_activity_for_result">Week 5 First Activity for Results</string>
+    <string name="week_6_fragment_in_activity">Week 6 Fragment In Activity</string>
+    <string name="week_6_length_activity">week 6 Length Activity</string>
+    <string name="week_6_sum_activity">Week 6 Sum Activity</string>
+    <string name="week_6_tabs">Week 6 Tabs</string>
+    <string name="week_6_navigation_activity">Week 6 Navigation Activity</string>
+    <string name="week_7_material_design">Week 7 Material Design</string>
+    <string name="retrofit_using_github_api">Week 8 Retrofit Using Github Api</string>
+    <string name="main_activity">Main Activity</string>
 </resources>

@@ -13,8 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".week6.NavigationTemplateActivity"
-            android:label="@string/title_activity_navigation_template"
+            android:name=".MainActivity"
+            android:label="@string/main_activity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,14 +22,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".week7.PermisionsActivity">
-
-        </activity>
+        <activity android:name=".week6.tabs.TabsActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".week8.GithubActivity" />
+        <activity
+            android:name=".week6.NavigationTemplateActivity"
+            android:label="@string/title_activity_navigation_template"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".week7.PermisionsActivity" />
         <activity android:name=".week7.AnimationActivity" />
         <activity android:name=".week7.MaterialDesignActivity" />
-        <activity android:name=".week6.LengthActivity" />
-        <activity android:name=".week6.SumActivity" />
-        <activity android:name=".week6.FragmentInActivity" />
+        <activity android:name=".week6.fragment.LengthActivity" />
+        <activity android:name=".week6.fragment.SumActivity" />
+        <activity android:name=".week6.fragment.FragmentInActivity" />
         <activity android:name=".week5.DebugActivity" />
         <activity android:name=".week5.ForResultActivity2" />
         <activity android:name=".week5.ForResultActivity1" />
@@ -39,7 +44,7 @@
         <activity android:name=".week4.RecyclerViewActivity" />
         <activity android:name=".week3.SpinnerActivity" />
         <activity android:name=".week3.WebViewActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".week2.Week2Activity" />
         <activity android:name=".week3.ViewGroupsActivity" />
         <activity android:name=".week3.LoginActivity" />
     </application>
