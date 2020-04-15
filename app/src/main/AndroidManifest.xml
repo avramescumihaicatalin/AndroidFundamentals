@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -12,6 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".services.ServiceActivity"></activity>
+        <activity android:name=".week7.CameraActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/main_activity"
@@ -22,13 +26,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".week6.tabs.TabsActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".week6.tabs.TabsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".week8.GithubActivity" />
         <activity
             android:name=".week6.NavigationTemplateActivity"
             android:label="@string/title_activity_navigation_template"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".week7.PermisionsActivity" />
         <activity android:name=".week7.AnimationActivity" />
         <activity android:name=".week7.MaterialDesignActivity" />
@@ -47,6 +52,9 @@
         <activity android:name=".week2.Week2Activity" />
         <activity android:name=".week3.ViewGroupsActivity" />
         <activity android:name=".week3.LoginActivity" />
+
+        <service android:name=".services.FirstService"
+            android:exported="false"/>
     </application>
 
 </manifest>
