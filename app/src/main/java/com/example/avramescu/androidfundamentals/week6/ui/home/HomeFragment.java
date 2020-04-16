@@ -13,6 +13,7 @@ import android.arch.lifecycle.ViewModelProviders;
 
 import com.example.avramescu.androidfundamentals.R;
 
+
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;

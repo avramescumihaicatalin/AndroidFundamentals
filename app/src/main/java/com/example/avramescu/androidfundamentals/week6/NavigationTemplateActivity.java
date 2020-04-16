@@ -19,14 +19,14 @@ import android.view.Menu;
 
 import com.example.avramescu.androidfundamentals.R;
 
-public class NavigationActivity extends AppCompatActivity {
+public class NavigationTemplateActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_navigation2);
+        setContentView(R.layout.activity_navigation_template);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -54,7 +54,7 @@ public class NavigationActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.navigation, menu);
+        getMenuInflater().inflate(R.menu.navigation_template, menu);
         return true;
     }
 

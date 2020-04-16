@@ -13,6 +13,7 @@ import android.arch.lifecycle.ViewModelProviders;
 
 import com.example.avramescu.androidfundamentals.R;
 
+
 public class GalleryFragment extends Fragment {
 
     private GalleryViewModel galleryViewModel;
