@@ -14,17 +14,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".services.ServiceActivity"></activity>
-        <activity android:name=".week7.CameraActivity" />
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/main_activity"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".services.ServiceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".week7.CameraActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/main_activity"
+            android:theme="@style/AppTheme.NoActionBar">
+
         </activity>
         <activity
             android:name=".week6.tabs.TabsActivity"
@@ -53,8 +55,12 @@
         <activity android:name=".week3.ViewGroupsActivity" />
         <activity android:name=".week3.LoginActivity" />
 
-        <service android:name=".services.FirstService"
-            android:exported="false"/>
+        <service
+            android:name=".services.ExampleService"
+            android:exported="false" />
+        <service
+            android:name=".services.ExampleIntentService"
+            android:exported="false" />
     </application>
 
 </manifest>

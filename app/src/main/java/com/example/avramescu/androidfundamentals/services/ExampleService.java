@@ -6,8 +6,8 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
-public class FirstService extends Service {
-    private final String TAG = FirstService.this.getClass().getSimpleName();
+public class ExampleService extends Service {
+    private final String TAG = ExampleService.this.getClass().getSimpleName();
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
@@ -20,5 +20,22 @@ public class FirstService extends Service {
     public IBinder onBind(Intent intent) {
         Log.i(TAG, "onBind");
         return null;
+    }
+
+    @Override
+    public void onCreate() {
+        Log.i(TAG, "onCreate");
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        super.onCreate();
+    }
+
+    @Override
+    public void onDestroy() {
+        Log.i(TAG, "onDestroy");
+        super.onDestroy();
     }
 }
