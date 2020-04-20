@@ -119,4 +119,7 @@
     <string name="retrofit_using_github_api">Week 8 Retrofit Using Github Api</string>
     <string name="main_activity">Main Activity</string>
     <string name="get_image">Take photo</string>
+    <string name="notification_title">notification</string>
+    <string name="notification_message">notification message</string>
+    <string name="ticker_text">ticker text</string>
 </resources>

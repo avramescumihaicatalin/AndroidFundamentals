@@ -4,13 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".services.ServiceActivity">
+    tools:context=".services.ServiceActivity"
+    android:orientation="vertical">
 
     <Button
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:text="Click"
+        android:id="@+id/btn_intent_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Example Intent Service"
         android:gravity="center"
-        android:background="#F00"/>
+        android:background="#F00"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/btn_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Example Service"
+        android:gravity="center"
+        android:background="#F00"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/btn_start_foreground_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Foreground Service"
+        android:gravity="center"
+        android:background="#F00"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/btn_stop_foreground_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop Foreground Service"
+        android:gravity="center"
+        android:background="#F00"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/btn_binding_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Binding Service"
+        android:gravity="center"
+        android:background="#F00"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:padding="16dp"/>
 
 </LinearLayout>
