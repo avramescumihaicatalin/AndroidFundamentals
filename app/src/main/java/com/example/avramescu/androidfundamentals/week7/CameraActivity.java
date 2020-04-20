@@ -26,7 +26,6 @@ import java.util.Date;
 import java.util.Locale;
 
 public class CameraActivity extends AppCompatActivity {
-    //TODO NOT WORKING
 
     private ImageView imageView;
 

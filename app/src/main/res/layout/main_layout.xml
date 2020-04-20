@@ -108,6 +108,13 @@
             android:layout_height="wrap_content"
             android:onClick="week8GithubAndRetrofiOnClick"
             android:text="@string/retrofit_using_github_api" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="servicesActivityOnclick"
+            android:text="@string/services_activity" />
+
     </LinearLayout>
 
 </ScrollView>

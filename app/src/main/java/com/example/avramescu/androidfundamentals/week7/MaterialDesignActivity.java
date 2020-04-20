@@ -1,12 +1,27 @@
 package com.example.avramescu.androidfundamentals.week7;
 
+import android.app.AlertDialog;
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.AnimationDrawable;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.DatePicker;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.TimePicker;
+import android.widget.Toast;
 
 import com.example.avramescu.androidfundamentals.R;
+
+import java.util.Calendar;
 
 public class MaterialDesignActivity extends AppCompatActivity {
 
@@ -14,29 +29,124 @@ public class MaterialDesignActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_material_design);
+
+        setAnimation();
+    }
+
+    private void setAnimation() {
+        //TODO not working
+        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.layout_parent_material);
+        AnimationDrawable animationDrawable = (AnimationDrawable) linearLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(2500);
+        animationDrawable.setExitFadeDuration(5000);
+        animationDrawable.start();
     }
 
     public void displayDatePickOnClick(View view) {
+        //set today as default date
+        final Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+        //display the date picker dialog
+        DialogFragment datePickerFragment = new CustomDatePickerFragment();
+        ((CustomDatePickerFragment) datePickerFragment).setYear(year);
+        ((CustomDatePickerFragment) datePickerFragment).setMonth(month);
+        ((CustomDatePickerFragment) datePickerFragment).setDay(day);
+
+        datePickerFragment.show(getSupportFragmentManager(), "Date picker");
     }
 
     public void displayTimePickOnClick(View view) {
+        //set today as default date
+        final Calendar calendar = Calendar.getInstance();
+        final int hour = calendar.get(Calendar.HOUR);
+        int minute = calendar.get(Calendar.MINUTE);
+
+        //display Time Picker Dialog
+        TimePickerDialog timePickerDialog = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                Toast.makeText(MaterialDesignActivity.this,
+                        "Selected time is: " + hour + ":" + minute, Toast.LENGTH_SHORT).show();
+            }
+        }, hour, minute, false);
+        timePickerDialog.show();
     }
 
     public void displayAlertdialogWitButtonsOnClick(View view) {
-    }
+        //setup the alert builder
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setTitle(getString(R.string.notice));
+        alertDialogBuilder.setTitle(getString(R.string.alert_title));
 
-    public void startPermissionActivity(View view) {
-    }
+        alertDialogBuilder.setPositiveButton(getString(R.string.launch_app),
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Toast.makeText(MaterialDesignActivity.this,
+                                getString(R.string.launch_app) + " " + getString(R.string.click),
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
+        alertDialogBuilder.setNeutralButton(getString(R.string.reminde_me),
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Toast.makeText(MaterialDesignActivity.this,
+                                getString(R.string.reminde_me) + " " + getString(R.string.click),
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
+        alertDialogBuilder.setNegativeButton(getString(R.string.cancel),
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Toast.makeText(MaterialDesignActivity.this,
+                                getString(R.string.cancel) + " " + getString(R.string.click),
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
 
-    public void takePictureOnClick(View view) {
-        startActivity(new Intent(MaterialDesignActivity.this, CameraActivity.class));
-    }
-
-    public void startCollapsingToolbarActivity(View view) {
+        // create and show the alert dialog
+        AlertDialog dialog = alertDialogBuilder.create();
+        dialog.show();
     }
 
     public void displaySnackBarOnClick(View view) {
-        Snackbar.make(view, "This is a snakcbar", Snackbar.LENGTH_LONG);
+        //setup Snack Bar and it should be inside of a CoordinatorLayout
+        Snackbar snackbar = Snackbar.make(view, "Eroor occured", Snackbar.LENGTH_LONG)
+                .setAction("Retry", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(MaterialDesignActivity.this,
+                                getString(R.string.retry_message), Toast.LENGTH_LONG).show();
+                    }
+                });
+
+        snackbar.setActionTextColor(Color.RED);
+        View snackbarView = snackbar.getView();
+        snackbarView.setBackgroundColor(ContextCompat.getColor(this, R.color.light_green));
+        TextView textView = snackbarView.findViewById(android.support.design.R.id.snackbar_text);
+        textView.setTextColor(Color.WHITE);
+
+        //display it
+        snackbar.show();
+    }
+
+    public void startPermissionActivity(View view) {
+        //TODO
+//        startActivity(new Intent(MaterialDesignActivity.this, PhotoGalleryActivity.class));
+    }
+
+    public void startCollapsingToolbarActivity(View view) {
+        startActivity(new Intent(MaterialDesignActivity.this, CollapsingToolbarActivity.class));
+    }
+
+    public void takePictureOnClick(View view) {
+        //TODO NOT WORKING
+        startActivity(new Intent(MaterialDesignActivity.this, CameraActivity.class));
     }
 
     /*  Stiluri

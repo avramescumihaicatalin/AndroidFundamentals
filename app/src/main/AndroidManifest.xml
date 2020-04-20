@@ -15,19 +15,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".services.ServiceActivity">
+        <activity android:name=".services.ServiceActivity"/>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/main_activity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".week7.CameraActivity" />
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/main_activity"
-            android:theme="@style/AppTheme.NoActionBar">
-
         </activity>
         <activity
             android:name=".week6.tabs.TabsActivity"
@@ -38,6 +35,9 @@
             android:label="@string/title_activity_navigation_template"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".week7.PermisionsActivity" />
+        <activity android:name=".week7.CollapsingToolbarActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".week7.CameraActivity" />
         <activity android:name=".week7.AnimationActivity" />
         <activity android:name=".week7.MaterialDesignActivity" />
         <activity android:name=".week6.fragment.LengthActivity" />

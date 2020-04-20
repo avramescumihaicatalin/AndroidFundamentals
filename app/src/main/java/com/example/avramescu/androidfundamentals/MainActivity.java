@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.example.avramescu.androidfundamentals.services.ServiceActivity;
 import com.example.avramescu.androidfundamentals.week2.Week2Activity;
 import com.example.avramescu.androidfundamentals.week3.LoginActivity;
 import com.example.avramescu.androidfundamentals.week3.SpinnerActivity;
@@ -99,5 +100,10 @@ public class MainActivity extends AppCompatActivity {
     // week 8
     public void week8GithubAndRetrofiOnClick(View view) {
         startActivity(new Intent(MainActivity.this, GithubActivity.class));
+    }
+
+    //services
+    public void servicesActivityOnclick(View view) {
+        startActivity(new Intent(MainActivity.this, ServiceActivity.class));
     }
 }
