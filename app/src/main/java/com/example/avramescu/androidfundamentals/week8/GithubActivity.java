@@ -1,12 +1,13 @@
 package com.example.avramescu.androidfundamentals.week8;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.avramescu.androidfundamentals.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -30,7 +31,7 @@ public class GithubActivity extends AppCompatActivity {
         mTextViewRetrofit = findViewById(R.id.textViewRetrofit);
         mImageViewPicasso = findViewById(R.id.imageViewPicasso);
 
-//        Picasso.get().load("https://9to5google.com/wp-content/uploads/sites/4/2015/10/android-versions.jpg").into(mImageViewPicasso);
+        Picasso.get().load("https://9to5google.com/wp-content/uploads/sites/4/2015/10/android-versions.jpg").into(mImageViewPicasso);
     }
 
     private void getData() {
@@ -279,8 +280,59 @@ public class GithubActivity extends AppCompatActivity {
 
      Firebase services sunt cross platform.
      Cand integrezi un serviciu extern esti notificat daca s-a instalat cu succes serviciul.
+     Auth si Firestore e in notes si e un repository in github.
 
-     //TODO ramas la 30:00 in ultimul curs.
+     Intram pe direbase, cream proiect nou, apoi dupa configurare selectam Android pentru a inregistra
+     aplicatia, adaugam package name-ul si dam un nume aplicatiei.
+     Debug signing certificate: Android studio -> Gradle( meniu lateral dreapta) -> root sau app ->
+     tasks -> android -> signingReport -> click dreapta -> run.
+     Luam cheia SHA1 din tab-ul Run si il adaugam in Firebase -> Register app
+     Downloadam Json-ul, schimbam perspectiva proiectului, copiem JSON-ul in folderul app.
+     Urmam pasii din firebase -> copiem
+     google()  // Google's Maven repository
+     classpath 'com.google.gms:google-services:4.3.3'
+     google()  // Google's Maven repository
+     in gradle project level file iar in gradle app level file urmatoarele
+     apply plugin: 'com.android.application'
+     apply plugin: 'com.google.gms.google-services'
+     implementation 'com.google.firebase:firebase-analytics:17.2.2'
+     Dam sync, rulam aplicatia, ne asiguram ca avem net si in firebase la urmatorul pas ne verifica
+     conectivitatea intre aplicatie si serviciul firebase.
+
+     Pentru proiect avem de facut Auth. Mergem in firebase la Authentication -> sign-in method ->
+     enable la Google ca sa facem authentificare cu google.
+
+        Monetizare
+     Premium - de la inceput e pe bani, cand vrei sa o descarci ti se cere sa platesti
+     Freemium - userul descarca free si apoi ca sa faca upgrade-uri face plata.
+     In app purchase ->
+     Nu e nevoie sa integrezi un serviciu de plata gen paypall, insusi Google play ofera serviciu de
+     paymaent.
+     Direct din google Play platesti cu contul asociat contului de gmail dar ti se percepe o extra
+     taxa, undeva la 30%.
+     Subscriptions - ca la ziar cand iti faci abonament sau Netflix
+     Ads - exista add mode in firebase care poate fi integrat in aplicatii.
+
+     In codechallenge-uri avem 3-4 codelab-uri facute de google in care avem teorie si cod. E un
+     codelab care ne ajuta sa facem un chat cu fisiere cu addmode, cu functions, cu BD si cu Auth si
+     remote config.
+
+     https://github.com/magdamiu/FirebaseIntegration
+     In firebaseIntegration avem Autentificarea cu firebase si cum sa salvam niste obiecte in
+     Cloud Firestore.
+     Firestore e un NoSQL cu Documente.
+     NoSQL sunt de mai multe tipuri.
+     O colectie are documente. O colectie poate sa fie Studenti si poate sa aiba la randul ei un
+     Studnet care are Id de tip int.
+     Avem Colectii si Documente si poti sa ai structura variabila adica poti sa ai Id si apoi Nume
+     care fac parte din acelasi Document.
+     Un document poate avea mai multe colectii sau mai multe campuri.
+     La proiect avem Trips si apoi Id, nume etc si mi-a facut colectia de Trips cu trip-ul asta,
+     asta e de fapt un trip.
+
+
+        Picasso
+     Librarie prin care afisezi o poza intr-un imageView de la un URL.
 
      * */
 }

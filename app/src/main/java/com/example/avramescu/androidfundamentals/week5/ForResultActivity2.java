@@ -1,13 +1,11 @@
 package com.example.avramescu.androidfundamentals.week5;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 
 import com.example.avramescu.androidfundamentals.R;
-
-import org.w3c.dom.Text;
 
 public class ForResultActivity2 extends AppCompatActivity {
 
