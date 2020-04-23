@@ -3,7 +3,7 @@ package com.example.avramescu.androidfundamentals.services;
 import android.app.IntentService;
 import android.content.Intent;
 
-import androidx.annotation.Nullable;
+import android.support.annotation.Nullable;
 import android.util.Log;
 
 public class ExampleIntentService extends IntentService {
