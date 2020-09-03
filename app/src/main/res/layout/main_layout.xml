@@ -115,6 +115,12 @@
             android:onClick="servicesActivityOnclick"
             android:text="@string/services_activity" />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="broadcastActivityOnClick"
+            android:text="@string/broadcast_activity" />
+
     </LinearLayout>
 
 </ScrollView>

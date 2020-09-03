@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:allowBackup="true"
@@ -16,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".services.ServiceActivity"/>
+        <activity android:name=".broadcast_receiver.BroadcastReceiverActivity"></activity>
+        <activity android:name=".services.ServiceActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/main_activity"
@@ -36,8 +37,9 @@
             android:label="@string/title_activity_navigation_template"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".week7.PermisionsActivity" />
-        <activity android:name=".week7.CollapsingToolbarActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".week7.CollapsingToolbarActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".week7.CameraActivity" />
         <activity android:name=".week7.AnimationActivity" />
         <activity android:name=".week7.MaterialDesignActivity" />
@@ -55,8 +57,12 @@
         <activity android:name=".week3.WebViewActivity" />
         <activity android:name=".week2.Week2Activity" />
         <activity android:name=".week3.ViewGroupsActivity" />
-        <activity android:name=".week3.LoginActivity" />
-
+        <activity android:name=".week3.LoginActivity" /> <!-- <receiver android:name=".broadcast_receiver.ExampleBroadcastReceiver"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.BOOT_COMPLETED" /> -->
+        <!-- <action android:name="android.net.conn.CONNECTIVITY_CHANGE" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
         <service
             android:name=".services.ExampleService"
             android:exported="false" />

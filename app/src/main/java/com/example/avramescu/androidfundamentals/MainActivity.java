@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 
+import com.example.avramescu.androidfundamentals.broadcast_receiver.BroadcastReceiverActivity;
 import com.example.avramescu.androidfundamentals.services.ServiceActivity;
 import com.example.avramescu.androidfundamentals.week2.Week2Activity;
 import com.example.avramescu.androidfundamentals.week3.LoginActivity;
@@ -105,5 +106,9 @@ public class MainActivity extends AppCompatActivity {
     //services
     public void servicesActivityOnclick(View view) {
         startActivity(new Intent(MainActivity.this, ServiceActivity.class));
+    }
+
+    public void broadcastActivityOnClick(View view) {
+        startActivity(new Intent(MainActivity.this, BroadcastReceiverActivity.class));
     }
 }
