@@ -112,6 +112,12 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="googleAuthOnClick"
+            android:text="@string/google_auth" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:onClick="servicesActivityOnclick"
             android:text="@string/services_activity" />
 

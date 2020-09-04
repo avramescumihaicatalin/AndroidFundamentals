@@ -16,7 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".broadcast_receiver.BroadcastReceiverActivity"></activity>
+        <activity android:name=".week8.firebaseAuth.AuthSuccessfulActivity"></activity>
+        <activity android:name=".week8.firebaseAuth.LoginGoogleAuth" />
+        <activity android:name=".broadcast_receiver.BroadcastReceiverActivity" />
         <activity android:name=".services.ServiceActivity" />
         <activity
             android:name=".MainActivity"

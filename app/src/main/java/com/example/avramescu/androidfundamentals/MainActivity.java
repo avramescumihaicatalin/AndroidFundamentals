@@ -23,6 +23,7 @@ import com.example.avramescu.androidfundamentals.week6.fragment.SumActivity;
 import com.example.avramescu.androidfundamentals.week6.tabs.TabsActivity;
 import com.example.avramescu.androidfundamentals.week7.MaterialDesignActivity;
 import com.example.avramescu.androidfundamentals.week8.GithubActivity;
+import com.example.avramescu.androidfundamentals.week8.firebaseAuth.LoginGoogleAuth;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -103,6 +104,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(MainActivity.this, GithubActivity.class));
     }
 
+    public void googleAuthOnClick(View view) {
+        startActivity(new Intent(MainActivity.this, LoginGoogleAuth.class));
+    }
+
     //services
     public void servicesActivityOnclick(View view) {
         startActivity(new Intent(MainActivity.this, ServiceActivity.class));
@@ -111,4 +116,5 @@ public class MainActivity extends AppCompatActivity {
     public void broadcastActivityOnClick(View view) {
         startActivity(new Intent(MainActivity.this, BroadcastReceiverActivity.class));
     }
+
 }

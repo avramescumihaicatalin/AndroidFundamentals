@@ -42,7 +42,14 @@ dependencies {
     //google analytics
     implementation 'com.google.firebase:firebase-analytics:17.2.2'
 
+    //google auth
+    implementation 'com.google.firebase:firebase-auth:19.3.2'
+    implementation 'com.google.android.gms:play-services-auth:18.1.0'
+    implementation 'com.google.android.gms:play-services-auth:18.1.0'
+    implementation 'com.google.firebase:firebase-core:17.5.0'
+
     implementation 'com.squareup.picasso:picasso:2.71828'
 
     implementation 'com.squareup.picasso:picasso:2.71828'
 }
+apply plugin: 'com.google.gms.google-services'
